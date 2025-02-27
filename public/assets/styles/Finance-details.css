@@ -1,0 +1,127 @@
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 20px;
+    width: 690px;
+    /* background: #000; */
+}
+.form-wrapper label{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(51, 51, 51)    ;
+    display: inline-block;
+    width: 250px !important;
+}
+.form-wrapper span{
+    font-size: .9rem;
+    font-weight: 600;
+    margin: 0px 20px;
+}
+.form-wrapper input,select{
+    color: black !important;
+    width: 350px !important;
+    background: #F8F8F8;
+    border: 1px solid #D0D0D0;
+    padding: 4px 2px;
+    border-radius: 3px;
+}
+
+.form-wrapper .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.flex-box{
+    display: flex;
+    gap: 5px;
+}
+
+.btn-group{
+     margin-top: 50px !important;
+    padding-left: 10px;
+}
+.btn{
+    padding: 6px 28px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: .9rem;
+    background: #CCCCCC;
+    border: none;
+}
+
+label > span{
+    display: none !important;
+}
+
+.table-wrapper-box{
+    width: 670px;
+}
+.table-wrapper-box table{
+    width: 100%;
+}
+
+
+.form-header{
+    margin: 40px 0px;
+}
+
+.btn-wrapper{
+    width: 100%;
+}
+.btn-wrapper button{
+    float: right;
+    margin-right: 8px;
+}
+.btn{
+    margin: 5px;
+}
+ button a{
+    color: white !important;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+ }
+
+ table i{
+    font-size: 1.2rem;
+    margin: 4px;
+ }
+
+@media (max-width:990px) {
+    .btn-group{
+        margin-top: 20px !important;
+    }
+    label span{
+        display: inline-block !important;
+        margin-left: 5px !important;
+    }
+    label{
+        margin: 6px 0px 5px 0px;
+    }
+    .form-wrapper span{
+        display: none;
+    }
+    .form-wrapper label{
+        width: auto !important;
+    } 
+    .form-wrapper div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:670px){
+    .form-wrapper {
+        width: 100%;
+        padding: 0px !important;
+    }
+    .form-wrapper input,select{
+        width: 100% !important;
+    }
+    .btn {
+        margin: 0px !important;
+        margin-top: 4px !important;
+    }
+}

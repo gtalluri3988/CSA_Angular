@@ -1,0 +1,196 @@
+/* General Styles */
+input,
+select {
+    padding: 4px 2px;
+    border: 1px solid #646464;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.parent-container {
+    display: flex;
+    gap: 0px !important;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.parent-container label {
+    display: inline-block;
+    margin: 0 !important;
+    width: 110px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Table styles */
+
+
+th {
+    background-color: #f2f2f2;
+}
+
+.valid {
+    color: green;
+    font-weight: bold;
+}
+
+.expired {
+    color: red;
+    font-weight: bold;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+form {
+    padding: 30px;
+}
+
+/* Form Group Styles */
+.form-group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.form-group label span {
+    display: none !important;
+}
+
+.form-group label {
+    width: 200px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 260px !important;
+    margin-left: 20px;
+}
+
+.filter-search input,
+.filter-search select {
+    width: 260px !important;
+}
+
+.filter-search .flex {
+    margin-bottom: 10px !important;
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 7px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-back,
+.btn-download {
+    width: 95px;
+    background-color: #d3d3d3;
+    color: black;
+    margin-top: 25px;
+}
+
+#QR,
+#Temporary {
+    color: black;
+}
+
+.btn-save {
+    margin-top: 25px;
+    width: 95px;
+    background-color: #0066ff;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+label span {
+    display: none;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .parent-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 0px !important;
+    }
+
+    .flex {
+        flex-direction: column !important
+    }
+
+    .form-group label {
+        width: auto !important;
+        margin-bottom: 6px !important;
+    }
+
+    form span {
+        display: none !important;
+        /* background: #000; */
+    }
+
+    form {
+        width: 100% !important;
+        padding: 0px !important;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100% !important;
+        margin-left: 0px;
+    }
+
+    .form-group {
+        width: 100% !important;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group span {
+        display: none !important;
+    }
+
+    .form-group span {
+        background: red;
+        display: none !important;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        /* Full-width buttons on mobile */
+    }
+}

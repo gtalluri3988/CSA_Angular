@@ -1,0 +1,88 @@
+td {
+    padding: 10px 20px !important;
+}
+
+td.paid {
+    color: #008000;
+}
+
+td.awaiting-payment {
+    color: #FF9100;
+}
+
+td.lapsed {
+    color: #FF0000;
+}
+
+.parent-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 0px 60px;
+    flex-wrap: wrap;
+}
+
+.filter-search label {
+    width: 160px;
+    color: #333;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.filter-search input,
+.filter-search select {
+    padding: 3px 0 ;
+    color: black;
+    width: 200px !important;
+}
+
+.filter-search .flex {
+    margin-bottom: 15px;
+}
+
+.search-btn {
+    padding-left: 0px !important;
+}
+
+.search-btn .btn {
+    margin: 10px 0px !important;
+}
+
+.form-heading {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Adjustments for medium screens */
+@media (max-width: 1090px) {
+    .parent-container {
+        gap: 0px 20px;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 678px) {
+    .filter-search input,
+    .filter-search select {
+        width: 100% !important;
+    }
+
+    .filter-search label {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .filter-search .flex {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    .parent-container {
+        flex-direction: column;
+        width: 100%;
+    }
+}

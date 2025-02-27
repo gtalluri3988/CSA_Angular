@@ -1,0 +1,194 @@
+<h2 class="heading">Community Management</h2>
+
+<!-- =======beadcrumb======== -->
+
+<div class="breadcrumb-wrapper">
+    <a href="">Home</a>>
+    <p>Add New Community</p>
+</div>
+
+<!-- ==========Page Header============ -->
+
+<div class="page-header">
+    <h2>Community Details</h2>
+</div>
+
+<form [formGroup]="communityForm" (submit)="addCommunity()">
+<!-- ==========Filter search===== -->
+<div class="form-wrapper">
+    <div>
+        <label for="communityType">Community Type <span>:</span></label>
+        <span>:</span>
+        <select name="communityType" id="communityType" formControlName="communityType">
+            <option value="">-Select-</option>
+            <option *ngFor="let item of baseService.communityTypeDropDown" [value]="item.id">
+                {{ item.name }}
+            </option>
+        </select>
+        <span *ngIf="f['communityType'].touched && f['communityType'].invalid">
+            <small *ngIf="f['communityType'].errors?.['required']">communityType is required</small>         
+        </span>
+    </div>
+    <div>
+        <label for="communityName">Community Name <span>:</span></label>
+        <span>:</span>
+        <input type="text" name="communityName" id="communityName" formControlName="communityName">
+        <div *ngIf=" f['communityName'].touched && f['communityName'].invalid">
+            <small *ngIf="f['communityName'].errors?.['required']">communityName is required</small>         
+        </div>
+    </div>
+    
+    <div>
+        <label for="address">Address <span>:</span></label>
+        <span>:</span>
+        <input type="text" name="address" id="address" formControlName="address">
+    </div>
+    <div *ngIf=" f['address'].touched && f['address'].invalid">
+        <small *ngIf="f['address'].errors?.['required']">address is required</small>         
+      </div>
+    <div>
+        <label for="state">State<span>:</span></label>
+        <span>:</span>
+        <select name="state" id="state" formControlName="state">
+            <option value="">-Select State-</option>
+            <option *ngFor="let item of baseService.stateDropDown" [value]="item.id">
+                {{ item.name }}
+            </option>
+        </select>
+    </div>
+    <div *ngIf=" f['state'].touched && f['state'].invalid">
+        <small *ngIf="f['state'].errors?.['required']">state is required</small>         
+      </div>
+    <div>
+        <label for="city">City <span>:</span></label>
+        <span>:</span>
+        <input type="text" name="city" id="city" formControlName="city">
+    </div>
+    <div *ngIf=" f['city'].touched && f['city'].invalid">
+        <small *ngIf="f['city'].errors?.['required']">city is required</small>         
+      </div>
+    <div>
+        <label for="noOfUnit">No. of Units <span>:</span></label>
+        <span>:</span>
+        <input type="number" name="noOfUnit" id="noOfUnit" formControlName="noOfUnit">
+    </div>
+    <div *ngIf=" f['noOfUnit'].touched && f['noOfUnit'].invalid">
+        <small *ngIf="f['noOfUnit'].errors?.['required']">address is required</small>         
+      </div>
+    <div>
+        <label for="noOfResidentPackingLot">No. of Parking Lot<span>:</span></label>
+        <span>:</span>
+        <input type="number" name="noOfResidentPackingLot" id="noOfResidentPackingLot" formControlName="noOfResidentPackingLot">
+    </div>
+    <div>
+        <label for="PICNAME">PIC Name<span>:</span></label>
+        <span>:</span>
+        <input type="text" name="picName" id="picName" formControlName="picName">
+    </div>
+    <div>
+        <label for="PICPhoneNo">PIC Phone No.<span>:</span></label>
+        <span>:</span>
+        <input type="text" name="picPhoneNo" id="picPhoneNo" formControlName="picPhoneNo">
+    </div>
+    <div>
+        <label for="PICEmail">PIC Email Address<span>:</span></label>
+        <span>:</span>
+        <input type="text" name="picEmail" id="picEmail" formControlName="picEmail">
+    </div>
+</div>
+
+
+<div class="page-header form-header">
+    <h2>Maintainance Fees Details</h2>
+</div>
+<div class="form-wrapper">
+
+    <div>
+        <label for="FeesMonthly">Fees (RM) / Monthly <span>:</span></label>
+        <span>:</span>
+        <input type="number" name="feesMonthly" id="feesMonthly" formControlName="feesMonthly">
+    </div>
+
+    <div>
+        <label for="gracePeriod">Grace Period (Days)<span>:</span></label>
+        <span>:</span>
+        <input type="number" name="gracePeriod" id="gracePeriod" formControlName="gracePeriod">
+    </div>
+</div>
+
+<div class="page-header form-header">
+    <h2>Visitor Parking Details</h2>
+</div>
+<div class="form-wrapper">
+    <div>
+        <label for="noOfResidentPackingLot">No. of Parking Lot<span>:</span></label>
+        <span>:</span>
+        <input for type="number" #parkinglots placeholder="">
+    </div>
+    <div>
+        <label for="chargesType">Charges Type <span>:</span></label>
+        <span>:</span>
+        <select  #ddchargeDropdown >
+            <option value="">-Select ChargeType-</option>
+            <option *ngFor="let item of baseService.chargeTypeDropDown" [value]="item.id">
+                {{ item.name }}
+            </option>
+        </select>
+    </div>
+    <div>
+        <label for="amount">Amount (RM)<span>:</span></label>
+        <span>:</span>
+        <input type="number"  #chargeAmountInput>
+    </div>
+    <div>
+        <label for="status">Status<span>:</span></label>
+        <span>:</span>
+        <select #ddstatus>
+            <option value="">-Select Status-</option>          
+            <option *ngFor="let item of baseService.statusDropDown" [value]="item.id">
+                {{ item.name }}
+            </option>
+        </select>
+
+    </div>
+    <div class="btn-wrapper">
+        <button class="btn btn-primary" type="button" (click)="addRow(parkinglots, ddchargeDropdown,chargeAmountInput,ddstatus)">Add</button>
+    </div>
+</div>
+
+<div class="table-wrapper-box table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>No. of Parking Lot</th>
+                <th>Type</th>
+                <th>Amount (RM)</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of tableRows.controls; let i = index" [formGroup]="getFormGroup(row)">
+                <td>{{row.get('noOfVistorParkingLot')?.value}}</td>
+                <td>{{ getChargeTypeOptionName(row.get('chargeType')?.value) }}</td>
+                <td>{{row.get('amount')?.value}}</td>
+                <td>{{ getStatusOptionName(row.get('status')?.value) }}</td>
+                <td>
+                     <a (click)="removeRow(i)"><img src="/assets/images/bin.png" height="20" width="20"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="btn-group">
+    <button class="btn">back</button>
+    <button class="btn btn-primary" type="submit">
+        Save
+    </button>
+</div>
+
+</form>
+
+

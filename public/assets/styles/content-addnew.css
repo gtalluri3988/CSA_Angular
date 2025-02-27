@@ -1,0 +1,84 @@
+form{
+    padding: 20px;
+    width: 600px;
+}
+.row{
+    display: flex;
+    margin-bottom: 10px;
+    font:"Arial Bold", 'Arial';
+    font-weight: 500;
+    font-style: normal;
+}
+.row input,.row textarea ,.row select{
+    width: 260px !important;
+
+}
+.row span{
+    font-weight: 700;
+    margin-right: 20px;
+}
+.row label{
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    width: 270px;
+}
+
+.upload{
+    margin-bottom: 10px;
+    width: 20px !important;
+}
+th,td{
+    border: 1px solid black;
+    padding: 5px;
+    padding-right: 200px;
+    text-align: center;
+        
+}
+th{
+    background-color: rgb(207, 203, 203);
+    text-align: center;
+
+}
+
+table{
+    text-align: center !important;
+    border-collapse: collapse;
+
+}
+button{
+    background-color: rgb(209, 204, 204);
+    border: 1px solid black;
+    border-style: hidden;
+    border-radius: 5px;
+    margin-top: 2px;
+    height: 30px;
+    width: 90px;
+}
+button.save{
+    background-color:rgb(5, 171, 226);
+    color:white;
+
+}
+
+@media (max-width:678px) {
+    .row{
+        flex-direction: column;
+    }
+    form{
+        padding: 0px;
+        width: 100%;
+    }
+    .row label, .row input, .row select, .row textarea{
+        width: 100% !important;
+    }
+    .row label span{
+        display: block;
+    }
+    .row label{
+        margin-bottom: 10px;
+    }
+    .row span{
+        display: none;
+    }
+}

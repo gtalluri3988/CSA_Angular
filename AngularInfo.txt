@@ -1,0 +1,7 @@
+--To create service
+
+ng generate service services/authservice/auth
+
+--To create component
+
+ng generate component features-modules/auth/login

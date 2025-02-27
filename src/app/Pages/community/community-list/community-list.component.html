@@ -1,0 +1,64 @@
+
+<h2 class="heading">Community Management</h2>
+
+            <!-- =======beadcrumb======== -->
+
+            <div class="breadcrumb-wrapper">
+                <a href="">Home</a>> <p>Community Setup</p>
+            </div>
+
+            <!-- ==========Page Header============ -->
+
+            <div class="page-header">
+                <h2>
+                    Community List
+                </h2>
+                <h2>
+                    <a href="/addcommunity" class="btn">Add New</a>
+                    
+                </h2>
+            </div>
+
+
+            <!-- ========table filter======== -->
+            <div class="table-filer-wrapper  ">
+                <div>
+                    <label for="entry">Show</label>
+                    <select name="entry" id="entry">
+                        <option value="10">10</option>
+
+                    </select>
+                    <label for="entry">entries</label>
+
+                </div>
+                <div>
+                    <label for="search">Search:</label>
+                    <input type="text" name="search" id="search" class="search">
+                </div>
+            </div>
+
+            <!-- =============Table============= -->
+          <!-- <div *ngIf="isLoading">Loading...</div> -->
+            <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Community ID</th>
+                            <th>Community Name</th>
+                            <th>City</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of items?.communityResult">
+                            <td><a href="./community-details.html">{{item.communityId}}</a></td>
+                            <td>{{item.communityName}}</td>
+                            <td>{{item.cityName}}</td>
+                            <td>{{item.stateId}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>

@@ -1,0 +1,192 @@
+form {
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #FFFFCC;
+    width: 500px;
+}
+
+h4 {
+    padding: 10px 0px 0px 30px;
+    font-size: .9rem;
+}
+
+ol {
+    padding: 20px 0px 20px 40px;
+    margin-top: 0px;
+}
+
+li {
+    font-size: .8rem;
+}
+
+.row {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    margin-bottom: 15px;
+    font: "Arial Bold", 'Arial';
+    font-weight: 500;
+    font-style: normal;
+    align-items: center;
+    flex-direction: row;
+}
+
+label {
+    margin-right: 30px;
+    width: 100px;
+}
+
+.row input {
+    width: 320px !important;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.row span {
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.row label {
+    display: inline-block;
+    width: 120px;
+}
+
+.horizon {
+    display: flex;
+    align-items: center;
+    /* margin: auto; */
+}
+
+p {
+    color: blue;
+
+}
+
+.jin {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.switch {
+    border: 0.5px solid black;
+    background-color: rgb(243, 238, 238);
+}
+
+.move {
+    margin-left: 4px;
+}
+
+button {
+    border: 2px solid black;
+    border-radius: 5px;
+    border-style: hidden;
+    height: 30px;
+    width: 90px;
+}
+
+.btm {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.btm-2 {
+    margin-left: 10px;
+    border: 2px solid black;
+    border-style: hidden;
+    width: 150px;
+}
+
+.btm-3 {
+    color: white;
+    background-color: rgb(55, 118, 255);
+    margin-left: 10px;
+}
+
+.btm-4 {
+    width: fit-content;
+    font-size: larger;
+    font-weight: 500;
+    background: none;
+}
+
+.breadcrumb-wrapper p {
+    color: black;
+}
+
+label span {
+    display: none !important;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 999px) {
+    .card {
+        display: block !important;
+    }
+
+    .row {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: start;
+        margin: 10px 0px !important;
+    }
+
+    label span {
+        display: block !important;
+    }
+
+    .row span {
+        display: none !important;
+    }
+
+    .row label {
+        width: 100%;
+        margin-bottom: 5px;
+        margin: 0px !important;
+    }
+
+    .row input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 4px 8px;
+    }
+
+    .btm {
+
+        align-items: start;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .btm-2 {
+        width: 100%;
+    }
+
+    button {
+        margin-left: 0px !important;
+        margin: 10px 0px !important;
+    }
+}
+
+@media (max-width:487px) {
+
+    .horizon {
+        flex-direction: column !important;
+        align-items: start !important;
+    }
+}

@@ -1,0 +1,42 @@
+table a {
+    text-decoration: underline !important;
+}
+
+.form-box {
+    margin-top: 40px;
+    gap: 100px;
+}
+
+.form-box label {
+    font-size: 14px;
+    font-weight: 700;
+    width: 170px !important;
+}
+.form-box input, .form-box select{
+    width: 200px;
+}
+
+.form-box select {
+    color: black;
+}
+
+@media (max-width:1090px) {
+    .form-box label {
+        width: 120px;
+    }
+
+    .form-box {
+        gap: 10px;
+    }
+}
+
+@media (max-width:976px) {
+    .form-box {
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    /* .form-box label, .form-box input, .form-box input {
+        width: 100% !important;
+    } */
+}

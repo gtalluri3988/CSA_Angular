@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community-addnew</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <!-- <link rel="stylesheet" href="./src/assets/styles/add-new-community.css"> -->
+
+</head>
+
+<body>
+
+    <!-- =========Navbar======== -->
+   
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Community Smart Access
+                </h2>
+            </div>
+            <div class="login-details-wrapper">
+                <h3 class="">
+                    Welcome, Fizrie Rahaman | Super Admin
+                </h3>
+                <a (click)="logout()" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+
+        </nav>
+    </header>
+   
+    <div class="main-container">
+
+        <!-- ========sidebar======= -->
+        <aside class="sidebar-container">
+            <ul class="sidebar-list">
+                <li class="sidebar-link-item"><a href="./dashboard.html">Dashboard</a></li>
+                <li class="sidebar-link-item"><a routerLink="/community">Community</a></li>
+                <li class="sidebar-link-item"><a href="./resident.html">Resident</a></li>
+                <li class="sidebar-link-item"><a href="./facility.html">Facility</a></li>
+                <li class="sidebar-link-item"><a href="./resident-access.html">Resident Access</a></li>
+                <li class="sidebar-link-item"><a href="./visitor-access.html">Visitor Access </a></li>
+                <li class="sidebar-link-item"><a href="./complaint.html">Complaint</a></li>
+                <li class="sidebar-link-item"><a href="./finance.html">Finance</a></li>
+                <li class="sidebar-link-item"><a href="./card.html">Card</a></li>
+                <li class="sidebar-link-item"><a href="./content.html">Content</a></li>
+                <li class="sidebar-link-item"><a href="./reporting.html">Reporting</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-container">
+            <div>
+                <div *ngIf="isLoading" class="spinner-overlay">
+                    <img src="assets/images/spinner.gif" alt="Loading..." />
+                  </div>
+            <router-outlet></router-outlet>
+            </div>
+       </main>
+
+    </div>
+    <footer class="footer-wrapper">
+
+    </footer>
+
+
+
+
+    <!-- =========script======= -->
+    <script src="script/index.js"></script>
+</body>
+
+</html>
